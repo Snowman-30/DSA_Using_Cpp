@@ -15,7 +15,7 @@ void vectors()
 
     vector<int> v1(5, 100); // 5 Instances of 100 will be stored.
     vector<int> v2(5);      // 5 Instances of 0 or garbage value will be stored.
-    vector<int> v3(2, 100);
+    vector<int> v3(2, 200);
 
     vector<int> vec1(5, 20); // 5 Instances of 20
     vector<int> vec2(vec1);  // Copy of vec1 with same instances.
@@ -78,6 +78,30 @@ void vectors()
         cout << it << " ";
     }
     cout << endl;
+
+    // Complete Insertion
+    vector<int> copy(2, 50);
+    v3.insert(v3.begin(), copy.begin(), copy.end());
+    for (auto it : v3)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+
+    cout << v.size();       // Shows the size of the vector
+    v.pop_back();           // Pops the last element of the vector
+    cout << endl;
+    cout << v.size();
+
+    v1.swap(v3);            // Swaps one vector with another
+    for (auto it : v1)
+    {
+        cout << it << " ";
+    }
+    cout << endl;
+    v.clear();              // Clears out the entire vector
+    v.emplace_back(2);
+    cout << v.empty();      // Checks whether the vector is empty or not via True(1) & False(0).
 }
 
 int main()
